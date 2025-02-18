@@ -1,0 +1,38 @@
+name: warehouse-orm
+
+services:
+    #db:
+    #    image: mariadb
+    #    restart: unless-stopped
+    #    environment:
+    #        MARIADB_ROOT_PASSWORD: root
+    #        MARIADB_DATABASE: Warehuse
+    #    ports:
+    #        - 3306:3306
+
+    #phpmyadmin:
+    #    image: phpmyadmin
+    #    restart: unless-stopped
+    #    environment:
+    #        MYSQL_ROOT_PASSWORD: root
+    #    ports:
+    #        - 8088:80
+
+    dbpostgres:
+        image: postgres:latest
+        restart: unless-stopped
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+            POSTGRES_DB: Warehuse
+        ports:
+            - 5432:5432
+
+    #pgadmin:
+    #    image: dpage/pgadmin4
+    #    restart: unless-stopped
+    #    environment:
+    #        PGADMIN_DEFAULT_EMAIL: felix20.09@hotmail.com
+    #        PGADMIN_DEFAULT_PASSWORD: root
+    #    ports:
+    #        - 8088:80
